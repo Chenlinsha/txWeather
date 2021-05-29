@@ -8,14 +8,10 @@ import nightYu from '../images/todayAndTomorrow/night/yu.png'
 import nightYun from '../images/todayAndTomorrow/night/yun.png'
 import nightYin from '../images/todayAndTomorrow/night/yin.png'
 
-
-
-
 // 今明两天天气的展示
 window.addEventListener('load', function () {
     showdtodayAndTomorrow(101010100)
 })
-
 
 // 展示今明两天的展示
 // 参数：cityID:城市ID
@@ -60,8 +56,3 @@ function Showday(weather, box) {
             box.children[3].src = nightYu;
     }
 }
-
-
-
-
-

@@ -12,6 +12,7 @@ $.getId('top-top-share').onclick = () => {
 $.getId('top-top-turnBack').onclick = () => {
     alert('此功能未开放！！')
 }
+
 // 展示顶部左边的空气质量指数
 // 参数：城市ID
 // 接口文档：天气API
@@ -24,7 +25,6 @@ export function showTopAir(cityID) {
 
     })
 }
-
 
 // 展示顶部中间的温度、温度概述、风向、风力等级、相对湿度、背景色的切换、顶部的城市
 // 参数：城市ID

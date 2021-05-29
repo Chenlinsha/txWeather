@@ -1,8 +1,8 @@
 import { $, axios, putWeatherImg } from './basic-tool.js'
+
 window.addEventListener('load', function () {
     showDetail(101010100)
 })
-
 
 // 24小时内天气的展示
 // 参数：cityID:城市ID

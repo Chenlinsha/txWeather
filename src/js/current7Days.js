@@ -1,14 +1,10 @@
 import { $, axios, theDay, getWeekDate, dataYesterday, putWeatherImg } from './basic-tool.js'
-import Chart from 'chart.js';
 
 window.addEventListener('load', function () {
     showYesterday(101010100)
     show7Days(101010100)
 })
 
-// 昨天天的展示
-// 参数：cityID:城市ID
-// 接口文档：天气API
 function showYesterday() {
     showDays(dataYesterday)
 }

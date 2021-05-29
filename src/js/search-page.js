@@ -7,25 +7,6 @@ import { showChart } from './chart.js'
 
 let len = 3; //最大搜索历史记录长度
 
-let goToSearch = (id) => {
-    livingAll(id)
-    showTopAir(id)
-    showTopMiddle(id)
-    showdtodayAndTomorrow(id)
-    closeSearchPage()
-    showDetail(id)
-    showChart(id)
-}
-
-export let closeSearchPage = () => {
-    $.getClass('search-page').style.transition = 'all .3s'
-    $.getClass('search-page').style.transform = `translateY(-100vh)`
-    $.getClass('search-result').innerHTML = ''
-    $.getId('search-page-search-input').value = ''
-    $.getClass('search-page-hotCity').style.display = 'block'
-    $.getClass('search-page-history').style.display = 'block'
-}
-
 $.getId('top-top-position').addEventListener('touchstart', function () {
     $.getClass('search-page').style.transition = 'all .3s'
     $.getClass('search-page').style.transform = `translateY(0vh)`
@@ -41,7 +22,6 @@ $.getId('top-top-position').addEventListener('touchstart', function () {
 $.getId('search-page-search-cancel').addEventListener('touchstart', function () {
     closeSearchPage()
 })
-
 
 // 搜索功能
 $.getId('search-page-search-input').addEventListener('keyup', function searchCity() {
@@ -69,39 +49,57 @@ function showSearchCity(location) {
     });
 }
 
-// 历史搜索记录的储存
-// 参数：搜索框内输入的内容
-function searchHistory(searchValue) {
-    if (searchValue == '') {
-        return;
-    }
-    for (let key in localStorage) {
-        if (searchValue == localStorage.getItem(key)) {
-            return;
-        }
-    }
-    localStorage.setItem(localStorage.length, searchValue);
-    if (localStorage.length > len) {
-        localStorage.removeItem(0);
-        for (let i = 1; i <= len; i++) {
-            let temp = localStorage.getItem(i)
-            localStorage.removeItem(i)
-            localStorage.setItem(i - 1, temp);
-        }
-    }
+export let closeSearchPage = () => {
+    $.getClass('search-page').style.transition = 'all .3s'
+    $.getClass('search-page').style.transform = `translateY(-100vh)`
+    $.getClass('search-result').innerHTML = ''
+    $.getId('search-page-search-input').value = ''
+    $.getClass('search-page-hotCity').style.display = 'block'
+    $.getClass('search-page-history').style.display = 'block'
 }
 
-function showHistory() {
-    let ul = $.getClass('search-page-history-ul').children
-    for (let i = 0; i < 3; i++) {
-        if (localStorage.getItem(i) != null) {
-            for (let j = 2; j >= 0; j--) {
-                if (ul[j].innerHTML == '') {
-                    ul[j].innerHTML = localStorage.getItem(i)
-                    break;
-                }
-            }
-        }
-    }
+let goToSearch = (id) => {
+    livingAll(id)
+    showTopAir(id)
+    showTopMiddle(id)
+    showdtodayAndTomorrow(id)
+    // closeSearchPage()
+    showDetail(id)
+    showChart(id)
 }
 
+// // 历史搜索记录的储存
+// // 参数：搜索框内输入的内容
+// function searchHistory(searchValue) {
+//     if (searchValue == '') {
+//         return;
+//     }
+//     for (let key in localStorage) {
+//         if (searchValue == localStorage.getItem(key)) {
+//             return;
+//         }
+//     }
+//     localStorage.setItem(localStorage.length, searchValue);
+//     if (localStorage.length > len) {
+//         localStorage.removeItem(0);
+//         for (let i = 1; i <= len; i++) {
+//             let temp = localStorage.getItem(i)
+//             localStorage.removeItem(i)
+//             localStorage.setItem(i - 1, temp);
+//         }
+//     }
+// }
+
+// function showHistory() {
+//     let ul = $.getClass('search-page-history-ul').children
+//     for (let i = 0; i < 3; i++) {
+//         if (localStorage.getItem(i) != null) {
+//             for (let j = 2; j >= 0; j--) {
+//                 if (ul[j].innerHTML == '') {
+//                     ul[j].innerHTML = localStorage.getItem(i)
+//                     break;
+//                 }
+//             }
+//         }
+//     }
+// }
