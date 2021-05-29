@@ -38,7 +38,7 @@ export function showTopMiddle(cityID) {
         $.getId('top-temperature').innerHTML = res.now.temp
         $.getId('top-wea').innerHTML = res.now.text
         $.getId('top-winAndSpeed').innerHTML = `${res.now.windDir} ${res.now.windScale}级`
-        $.getId('top-humidity').innerHTML = res.now.humidity
+        $.getId('top-humidity').innerHTML = `湿度${res.now.humidity}%`
         console.log(isDay(res.now.obsTime));
         if (res.now.text == '晴') {
             if (isDay(res.now.obsTime))
