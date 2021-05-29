@@ -2,3 +2,7 @@ body{
     background: rgb(244,244,244);
     overflow-x: hidden;
 }
+#main{
+    width: 400px;
+    height: 400px;
+}

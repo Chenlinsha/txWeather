@@ -55,3 +55,49 @@
     margin-left: 63px;
     width: 60px;
 }
+
+.current7Days p:nth-child(5){
+    margin: 0;
+    margin-top: 80px;
+    font-size: 35px;
+    text-align: center;
+    color: #434343;
+}
+
+.current7Days p:nth-child(6){
+    margin: 0;
+    margin-top: 222px;
+    font-size: 35px;
+    text-align: center;
+    color: #434343;
+}
+
+.current7Days p:nth-child(8){
+    
+    margin: 0;
+    margin-top: 52px;
+    margin-left: 0px;
+    color: #434343;
+    font-size: 38px;
+    text-align: center;
+}
+.current7Days p:nth-child(9){
+    text-align: center;
+    margin: 0;
+    margin-top: 63px;
+    margin-left: 0px;
+    color: #b2b2b2;
+    font-size: 32px;
+}
+/* .bigbox{
+    
+} */
+.myChartBox{
+    position: absolute;
+    display:inline-block;
+    width: 1600px;
+    top: 2570px;
+    left: 0;
+    /* background-color: blue; */
+    overflow-x: scroll;
+}

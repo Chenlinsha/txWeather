@@ -29,17 +29,19 @@
     margin-right: 10px;
     height: 50px;
     width: 35px;
+    margin-top: 1.3vw;
 }
 
 #top-top-position p{
     display: inline-block;
-    margin-top: 10px;
+    margin-top: 2.3vw;
     color: #ffffff;
     line-height: 105px;
     font-size: 44px;
 }
 
 #top-top-share{
+    margin-right: 10px;
     margin-top: 51px;
     height: 54px;
 }

@@ -16,3 +16,4 @@ import "./todayAndTomorrow.js"
 import "./todayDetail.js"
 import './current7Days.js'
 import './search-page.js'
+import './chart.js'

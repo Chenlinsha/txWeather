@@ -6,7 +6,7 @@ import yundong from '../images/living/sports.png'
 import ziwaixian from '../images/living/sun.png'
 import taiyangjing from '../images/living/umbrella.png'
 import xiche from '../images/living/car.png'
-import kongtiao from '../images/living/kouhong.png'
+import kongtiao from '../images/living/temp.png'
 import lvyou from '../images/living/lvyou.png'
 import guomin from '../images/living/cold.png'
 import shushifu from '../images/living/smile.png'
@@ -51,6 +51,7 @@ function showLiving(daily, type, i, box) {
             break;
         case 3:
             img.src = chuanyi
+            break;
         case 4:
             img.src = diaoyu
             break;

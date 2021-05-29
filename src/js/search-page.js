@@ -3,6 +3,7 @@ import { livingAll } from "./living";
 import { showTopAir, showTopMiddle } from "./top.js"
 import { showdtodayAndTomorrow } from "./todayAndTomorrow.js"
 import { showDetail } from './todayDetail.js'
+import { showChart } from './chart.js'
 
 let len = 3; //最大搜索历史记录长度
 
@@ -13,6 +14,7 @@ let goToSearch = (id) => {
     showdtodayAndTomorrow(id)
     closeSearchPage()
     showDetail(id)
+    showChart(id)
 }
 
 export let closeSearchPage = () => {

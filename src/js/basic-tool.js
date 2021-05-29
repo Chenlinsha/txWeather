@@ -90,12 +90,24 @@ let day1 = new Date();
 day1.setTime(day1.getTime() - 24 * 60 * 60 * 1000);
 let s1 = day1.getFullYear() + "-" + (day1.getMonth() > 8 ? day1.getMonth() + 1 : `0${day1.getMonth() + 1}`) + "-" + (day1.getDate() > 9 ? day1.getDate() : `0${day1.getDate()}`);
 export const dataYesterday = Mock.mock({
+    air: "58",
+    air_level: "良",
+    air_tips: "空气好，可以外出活动，除极少数对污染物特别敏感的人群以外，对公众没有危害！",
+    alarm: { alarm_type: "大风", alarm_level: "蓝色", alarm_content: "市气象台2021年5月29日22时05分发布大风蓝色预警信号：预计，当前至30日09时，本市大部分地区有3、4级偏南风，阵风6、7级，请注意防范。（预警信息来源：国家预警信息发布中心）" },
     date: s1,
-    tem_day: Mock.Random.natural(10, 30),
-    tem_night: Mock.Random.natural(10, 20),
-    wea: "晴转小雨",
+    tem: "21",
+    tem1: "28",
+    tem2: "15",
+    visibility: "30km",
+    wea: "阴转小雨",
+    wea_day: "阴",
+    wea_day_img: "yin",
     wea_img: "yu",
-    win: "东北风",
+    wea_night: "小雨",
+    wea_night_img: "yu",
+    week: "星期六",
+    win: ["北风", "西北风"],
+    win_meter: "10km/h",
     win_speed: "3-4级转<3级",
 })
 
@@ -118,7 +130,7 @@ export const putWeatherImg = (weather, where) => {
         else
             where.src = nightYun;
     }
-    else if (weather == '阵雨' || weather == '小雨' || weather == '雷阵雨') {
+    else if (weather == '阵雨' || weather == '小雨' || weather == '雷阵雨' || weather == '中雨' || weather == '大雨' || weather == '暴雨') {
         if (isDay())
             where.src = dayYu;
         else

@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <script src="../src/js/chart.min.js"></script>
     <div class="search-page">
         <div class="search-page-search">
             <div class="search-page-search-box">
@@ -19,14 +20,14 @@
             <span id="search-page-search-cancel">取消</span>
 
         </div>
-        <div class="search-page-history">
+        <!-- <div class="search-page-history">
             <p>历史记录</p>
             <ul class="search-page-history-ul">
                 <li></li>
                 <li></li>
                 <li></li>
             </ul>
-        </div>
+        </div> -->
         <div class="search-page-hotCity">
             <p>热门城市</p>
             <ul class="search-page-hotCity-ul">
@@ -95,6 +96,12 @@
 
     <div class="bigCurrent7Days">
         <div class="current7Days">
+
+        </div>
+    </div>
+    <div class="bigbox">
+        <div class="myChartBox">
+            <canvas id="myChart"></canvas>
         </div>
     </div>
 
@@ -127,6 +134,9 @@
     </ul>
     <p id='bottom-copyright1'>数据来源于中国天气网</p>
     <p id='bottom-copyright2'>Copyright © 1998 - 2021 Tencent. All Rights Reserved</p>
+
+
+
 </body>
 
 </html>
