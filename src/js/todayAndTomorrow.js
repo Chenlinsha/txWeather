@@ -20,8 +20,8 @@ window.addEventListener('load', function () {
 // 展示今明两天的展示
 // 参数：cityID:城市ID
 // 接口文档：和风天气
-function showdtodayAndTomorrow(cityID) {
-    axios.get(`https://devapi.qweather.com/v7/weather/3d?location=${cityID}&key=e456561a17a04bdaa286c9ce87cf177c`).then((res) => {
+export function showdtodayAndTomorrow(cityID) {
+    axios.get(`https://devapi.qweather.com/v7/weather/3d?location=${cityID}&key=4359373e7b464309af90e18de69be688`).then((res) => {
         let today = $.getClass('todayAndTomorrow-today')
         let tomorrow = $.getClass('todayAndTomorrow-tomorrow')
         Showday(res.daily[0], today)

@@ -18,6 +18,7 @@ function showYesterday() {
 // 接口文档：天气API
 function show7Days(cityID) {
     axios.get(`https://www.tianqiapi.com/free/week?appid=76658471&appsecret=kku3yO9Y&cityid=${cityID}`).then((res) => {
+        console.log(res);
         console.log(res.data);
         res.data.forEach((item, index) => { showDays(item, index) });
     })

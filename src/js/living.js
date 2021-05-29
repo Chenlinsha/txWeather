@@ -15,22 +15,25 @@ import kongqiwuran from '../images/living/air.png'
 import chuanyi from '../images/living/cloth.png'
 import diaoyu from '../images/living/diaoyu.png'
 
-export let livingAll = function () {
-    window.addEventListener('load', function () {
-        axios.get(`https://devapi.qweather.com/v7/indices/1d?type=0&location=101010100&key=e456561a17a04bdaa286c9ce87cf177c`).then(res => {
-            console.log(res);
-            let daily = res.daily
-            for (let i = 0; i < 8; i++) {
-                showLiving(daily[i], daily[i].type, i, $.getClass('living-1').children[i]);
-            }
-            for (let i = 8; i < 16; i++) {
-                showLiving(daily[i], daily[i].type, i, $.getClass('living-2').children[i - 8]);
-            }
-        })
+export let livingAll = function (cityID) {
+    axios.get(`https://devapi.qweather.com/v7/indices/1d?type=0&location=${cityID}&key=4359373e7b464309af90e18de69be688`).then(res => {
+        console.log(res);
+        let daily = res.daily
+        for (let i = 0; i < 8; i++) {
+            showLiving(daily[i], daily[i].type, i, $.getClass('living-1').children[i]);
+        }
+        for (let i = 8; i < 16; i++) {
+            showLiving(daily[i], daily[i].type, i, $.getClass('living-2').children[i - 8]);
+        }
     })
 }
 
+window.addEventListener('load', function () {
+    livingAll(101010100)
+})
+
 function showLiving(daily, type, i, box) {
+    box.innerHTML = ''
     let des = document.createElement('p')
     let name = document.createElement('p')
     let img = document.createElement('img')

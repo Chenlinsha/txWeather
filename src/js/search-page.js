@@ -1,19 +1,45 @@
 import { $, axios } from "./basic-tool"
 import { livingAll } from "./living";
-let len = 3; //最大搜索历史记录长度
-$.getId('top-top-position').addEventListener('touchstart', function () {
-    $.getClass('search-page').style.transition = 'all .3s'
-    $.getClass('search-page').style.transform = `translateY(0vh)`
-})
+import { showTopAir, showTopMiddle } from "./top.js"
+import { showdtodayAndTomorrow } from "./todayAndTomorrow.js"
+import { showDetail } from './todayDetail.js'
 
-$.getId('search-page-search-cancel').addEventListener('touchstart', function () {
+let len = 3; //最大搜索历史记录长度
+
+let goToSearch = (id) => {
+    livingAll(id)
+    showTopAir(id)
+    showTopMiddle(id)
+    showdtodayAndTomorrow(id)
+    closeSearchPage()
+    showDetail(id)
+}
+
+export let closeSearchPage = () => {
     $.getClass('search-page').style.transition = 'all .3s'
     $.getClass('search-page').style.transform = `translateY(-100vh)`
     $.getClass('search-result').innerHTML = ''
     $.getId('search-page-search-input').value = ''
     $.getClass('search-page-hotCity').style.display = 'block'
     $.getClass('search-page-history').style.display = 'block'
+}
+
+$.getId('top-top-position').addEventListener('touchstart', function () {
+    $.getClass('search-page').style.transition = 'all .3s'
+    $.getClass('search-page').style.transform = `translateY(0vh)`
+    let hotId = [101010100, 101020100, 101280101, 101280601, 101180101, 101050311, 101190101, 101210101, 101200101, 101270101, 101070101, 101030100]
+    for (let i = 0; i < $.getClass('search-page-hotCity-ul').children.length; i++) {
+        console.log(i);
+        $.getClass('search-page-hotCity-ul').children[i].onclick = function () {
+            goToSearch(hotId[i])
+        }
+    }
 })
+
+$.getId('search-page-search-cancel').addEventListener('touchstart', function () {
+    closeSearchPage()
+})
+
 
 // 搜索功能
 $.getId('search-page-search-input').addEventListener('keyup', function searchCity() {
@@ -37,9 +63,7 @@ function showSearchCity(location) {
         p.innerHTML = item.adm1 + ',' + item.adm2 + ',' + item.name
         $.getClass('search-result').appendChild(li)
         li.addEventListener('click', function () {
-            livingAll()
-            searchHistory(item.adm2)
-            showHistory()
+            goToSearch(item.id)
         });
     });
 }

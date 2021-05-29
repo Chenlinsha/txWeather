@@ -1,8 +1,55 @@
 .todayDetail{
-    
     margin-top: 30px;
     height: 405px;
     background: rgb(254,254,254);
     border-bottom: 3px solid #e4e4e4;
+    width: 100%;
+    overflow-x: scroll;
+}
+
+.todayDetail::-webkit-scrollbar{
+    display: none;
+}
+
+.todayDetail-ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    width: 4320px;
     display: flex;
+    justify-content: space-around;
+}
+
+.todayDetail-ul li{
+    display: inline-block;
+    width: 180px;
+}
+
+.todayDetail-ul li p:nth-child(1){
+    text-align: center;
+    margin: 0;
+    margin-top: 90px;
+    padding: 0;
+    color: #999999;
+    height: 25px;
+}
+
+.todayDetail-ul li img{
+    margin: 0;
+    margin-top: 54px;
+    margin-left: 56px;
+    padding: 0;
+    color: #999999;
+    height: 60px;
+    width: 60px;
+}
+
+.todayDetail-ul li p:nth-child(3){
+    text-align: center;
+    margin: 0;
+    margin-top: 59px;
+    padding: 0;
+    color: #434343;
+    height: 31px;
 }
