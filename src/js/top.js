@@ -6,7 +6,12 @@ window.addEventListener('load', function () {
     showTopAir(101010100)
 })
 
-
+$.getId('top-top-share').onclick = () => {
+    alert('此功能未开放！！')
+}
+$.getId('top-top-turnBack').onclick = () => {
+    alert('此功能未开放！！')
+}
 // 展示顶部左边的空气质量指数
 // 参数：城市ID
 // 接口文档：天气API
