@@ -46,7 +46,6 @@ $.getId('search-page-search-cancel').addEventListener('touchstart', function () 
 // 搜索功能
 $.getId('search-page-search-input').addEventListener('keyup', function searchCity() {
     $.getClass('search-page-hotCity').style.display = 'none'
-    $.getClass('search-page-history').style.display = 'none'
     axios.get(`https://geoapi.qweather.com/v2/city/lookup?location=${$.getId('search-page-search-input').value}&range=cn&key=e456561a17a04bdaa286c9ce87cf177c`).then(res => {
         showSearchCity(res.location)
     })
