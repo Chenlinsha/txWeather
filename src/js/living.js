@@ -143,7 +143,6 @@ box.addEventListener('touchend', function (e) {
         box.style.transform = `translateX(${index * (width / 2)}px)`
         box.style.transition = 'all .2s'
     }
-
 })
 
 livingAll()
