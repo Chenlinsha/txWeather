@@ -7,6 +7,17 @@ import { showChart } from './chart.js'
 
 let len = 3; //最大搜索历史记录长度
 
+let goToSearch = (id) => {
+    console.log(1);
+    livingAll(id)
+    showTopAir(id)
+    showTopMiddle(id)
+    showdtodayAndTomorrow(id)
+    closeSearchPage()
+    showDetail(id)
+    showChart(id)
+}
+
 $.getId('top-top-position').addEventListener('touchstart', function () {
     $.getClass('search-page').style.transition = 'all .3s'
     $.getClass('search-page').style.transform = `translateY(0vh)`
@@ -58,15 +69,7 @@ export let closeSearchPage = () => {
     $.getClass('search-page-history').style.display = 'block'
 }
 
-let goToSearch = (id) => {
-    livingAll(id)
-    showTopAir(id)
-    showTopMiddle(id)
-    showdtodayAndTomorrow(id)
-    // closeSearchPage()
-    showDetail(id)
-    showChart(id)
-}
+
 
 // // 历史搜索记录的储存
 // // 参数：搜索框内输入的内容
