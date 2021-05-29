@@ -26,7 +26,7 @@ PS
 ### 其他使用
 #### mock
 在七天内天气的功能中，因为接口文档不提供昨天的数据，故自己利用mock写了数据进去
-#### 尝试对ajax进行简单封装（axios）
+#### 尝试对ajax进行简单封装（封装成axios）
 对get、post、getAll进行了简单封装
 #### 对document.querySelector和document.querySelectorAll进行了简单封装
 使代码看起来更加简洁
