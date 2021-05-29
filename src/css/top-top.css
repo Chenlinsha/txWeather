@@ -1,0 +1,47 @@
+.top{
+    position: relative;
+    height: 1410px;
+    width: 100%;
+}
+.top-top{
+    width: 100vw;
+    display: flex;
+    height: 105px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#top-top-turnBack{
+    margin-top: 51px;
+    margin-left: 20px;
+    height: 54px;
+    width: 45px;
+}
+
+#top-top-position{
+    position: relative;
+}
+
+#top-top-position img{
+    position: absolute;
+    top: 40px;
+    left: -50px;
+    margin-right: 10px;
+    height: 50px;
+    width: 35px;
+}
+
+#top-top-position p{
+    display: inline-block;
+    margin-top: 10px;
+    color: #ffffff;
+    line-height: 105px;
+    font-size: 44px;
+}
+
+#top-top-share{
+    margin-top: 51px;
+    height: 54px;
+}
+
+

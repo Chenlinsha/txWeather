@@ -1,0 +1,58 @@
+.todayAndTomorrow{
+    height: 306px;
+    width: 100%;
+    background-color: #fefefe;
+    border-bottom: 3px solid #e4e4e4;
+    display: flex;
+    align-items: center;
+}
+
+.todayAndTomorrow div{
+    position: relative;
+    width: 50%;
+    height: 156px;
+    
+}
+
+.todayAndTomorrow-today{
+    border-right: 3px solid #f0f0f0;
+}
+
+.todayAndTomorrow div p:nth-child(1){
+    position: absolute;
+    top: 0;
+    left: 61px;
+    margin: 0;
+    font-size: 40px;
+    color: #434343;
+    display: inline-block;
+    margin-bottom: 0;
+}
+
+.todayAndTomorrow div p:nth-child(2){
+    position: absolute;
+    top: 0;
+    right: 60px;
+    margin: 0;
+    font-size: 30px;
+    color: #434343;
+    display: inline-block;
+    margin-bottom: 0;
+}
+
+.todayAndTomorrow div p:nth-child(3){
+    position: absolute;
+    top: 90px;
+    left: 61px;
+    margin: 0;
+    display: inline-block;
+    font-size: 40px;
+    color: #434343;
+}
+
+.todayAndTomorrow div img{
+    position: absolute;
+    top: 90px;
+    right: 60px;
+    width: 60px;
+}

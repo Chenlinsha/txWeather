@@ -1,0 +1,8 @@
+.todayDetail{
+    
+    margin-top: 30px;
+    height: 405px;
+    background: rgb(254,254,254);
+    border-bottom: 3px solid #e4e4e4;
+    display: flex;
+}

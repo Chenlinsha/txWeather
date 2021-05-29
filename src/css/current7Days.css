@@ -1,0 +1,57 @@
+.bigCurrent7Days{
+    width: 100%;
+    overflow-x: scroll;
+}
+
+.bigCurrent7Days::-webkit-scrollbar {
+    display: none;
+}
+
+.current7Days{
+    width: 1600px;
+    margin-top: 30px;
+    height: 1170px;
+    border-bottom: 3px solid #e4e4e4;
+    border-top: 3px solid #e4e4e4;
+    display: flex;
+    background-color: #fefefe;
+    justify-content: space-between;
+}
+
+.current7Days div{
+    width: 200px;
+    height: 100%;
+}
+
+.current7Days p:nth-child(1){
+    margin: 0;
+    margin-top: 75px;
+    margin-left: 64px;
+    color: #b2b2b2;
+    font-size: 34px;
+}
+
+.current7Days p:nth-child(2){
+    margin: 0;
+    margin-top: 21px;
+    margin-left: 52px;
+    color: #b2b2b2;
+    font-size: 28px;
+}
+
+.current7Days p:nth-child(3){
+    width: 80px;
+    text-align: center;
+    margin: 0;
+    margin-top: 21px;
+    margin-left: 52px;
+    color: #434343;
+    font-size: 40px;
+}
+
+.current7Days img{
+    margin: 0;
+    margin-top: 52px;
+    margin-left: 63px;
+    width: 60px;
+}
