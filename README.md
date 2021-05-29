@@ -29,4 +29,5 @@ PS
 #### 尝试对ajax进行简单封装（封装成axios）
 对get、post、getAll进行了简单封装
 #### 对document.querySelector和document.querySelectorAll进行了简单封装
+document.querySelector封装为$.getClass()或$.getId()或$.getAllClass()
 使代码看起来更加简洁
