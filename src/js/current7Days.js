@@ -12,10 +12,9 @@ function showYesterday() {
 // 7天的展示
 // 参数：cityID:城市ID
 // 接口文档：天气API
-function show7Days(cityID) {
+export function show7Days(cityID) {
     axios.get(`https://v0.yiketianqi.com/api?version=v9&appid=76658471&appsecret=kku3yO9Y&cityid=${cityID}`).then((res) => {
-        console.log(res);
-        console.log(res.data);
+        $.getClass('current7Days').innerHTML = ''
         res.data.forEach((item, index) => { showDays(item, index) });
     })
 }

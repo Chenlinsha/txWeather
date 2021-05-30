@@ -4,6 +4,7 @@ import { showTopAir, showTopMiddle } from "./top.js"
 import { showdtodayAndTomorrow } from "./todayAndTomorrow.js"
 import { showDetail } from './todayDetail.js'
 import { showChart } from './chart.js'
+import { show7Days } from './current7Days.js'
 
 let len = 3; //最大搜索历史记录长度
 
@@ -16,6 +17,7 @@ let goToSearch = (id) => {
     closeSearchPage()
     showDetail(id)
     showChart(id)
+    show7Days(id)
 }
 
 $.getId('top-top-position').addEventListener('touchstart', function () {
