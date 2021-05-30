@@ -66,7 +66,7 @@ export let closeSearchPage = () => {
     $.getClass('search-result').innerHTML = ''
     $.getId('search-page-search-input').value = ''
     $.getClass('search-page-hotCity').style.display = 'block'
-    $.getClass('search-page-history').style.display = 'block'
+    // $.getClass('search-page-history').style.display = 'block'
 }
 
 
