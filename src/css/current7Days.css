@@ -40,11 +40,11 @@
 }
 
 .current7Days p:nth-child(3){
-    width: 80px;
+    width: 120px;
     text-align: center;
     margin: 0;
     margin-top: 21px;
-    margin-left: 52px;
+    margin-left: 42px;
     color: #434343;
     font-size: 40px;
 }

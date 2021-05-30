@@ -130,7 +130,7 @@ export const putWeatherImg = (weather, where) => {
         else
             where.src = nightYun;
     }
-    else if (weather == '阵雨' || weather == '小雨' || weather == '雷阵雨' || weather == '中雨' || weather == '大雨' || weather == '暴雨') {
+    else if (weather == '阵雨' || weather == '小雨' || weather == '雷阵雨' || weather == '中雨' || weather == '大雨' || weather == '暴雨' || weather == '小到中雨' || weather == '中到大雨') {
         if (isDay())
             where.src = dayYu;
         else
