@@ -9,7 +9,6 @@ window.addEventListener('load', function () {
 // 接口文档：和风天气
 export function showDetail(cityID) {
     axios.get(`https://v0.yiketianqi.com/api?version=v62&appid=76658471&appsecret=kku3yO9Y&cityid=${cityID}`).then((res) => {
-        console.log(res.hours);
         $.getClass('todayDetail-ul').innerHTML = ''
         res.hours.forEach(item => {
             showHourDetail(item)

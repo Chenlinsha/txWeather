@@ -34,12 +34,10 @@ export function showTopMiddle(cityID) {
         $.getId('top-top-position-city').innerHTML = res.location[0].adm2
     })
     axios.get(`https://devapi.qweather.com/v7/weather/now?location=${cityID}&key=4359373e7b464309af90e18de69be688`).then((res) => {
-        console.log(res);
         $.getId('top-temperature').innerHTML = res.now.temp
         $.getId('top-wea').innerHTML = res.now.text
         $.getId('top-winAndSpeed').innerHTML = `${res.now.windDir} ${res.now.windScale}级`
         $.getId('top-humidity').innerHTML = `湿度${res.now.humidity}%`
-        console.log(isDay(res.now.obsTime));
         if (res.now.text == '晴') {
             if (isDay(res.now.obsTime))
                 $.getClass('top').style.backgroundImage = `linear-gradient(rgb(59,189,255),rgb(70,228,255))`

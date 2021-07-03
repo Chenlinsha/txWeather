@@ -10,8 +10,6 @@ export function showChart(cityID) {
             dataDay[i] = data[i].tem1
             dataNight[i] = data[i].tem2
         }
-        console.log(dataDay);
-        console.log(dataNight);
         let myChart = new Chart(ctx, {
             type: 'line',
             data: {

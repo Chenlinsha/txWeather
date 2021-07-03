@@ -17,7 +17,6 @@ import diaoyu from '../images/living/diaoyu.png'
 
 export let livingAll = function (cityID) {
     axios.get(`https://devapi.qweather.com/v7/indices/1d?type=0&location=${cityID}&key=4359373e7b464309af90e18de69be688`).then(res => {
-        console.log(res);
         let daily = res.daily
         for (let i = 0; i < 8; i++) {
             showLiving(daily[i], daily[i].type, i, $.getClass('living-1').children[i]);

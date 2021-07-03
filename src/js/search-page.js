@@ -9,7 +9,6 @@ import { show7Days } from './current7Days.js'
 let len = 3; //最大搜索历史记录长度
 
 let goToSearch = (id) => {
-    console.log(1);
     livingAll(id)
     showTopAir(id)
     showTopMiddle(id)
@@ -25,7 +24,6 @@ $.getId('top-top-position').addEventListener('touchstart', function () {
     $.getClass('search-page').style.transform = `translateY(0vh)`
     let hotId = [101010100, 101020100, 101280101, 101280601, 101180101, 101050311, 101190101, 101210101, 101200101, 101270101, 101070101, 101030100]
     for (let i = 0; i < $.getClass('search-page-hotCity-ul').children.length; i++) {
-        console.log(i);
         $.getClass('search-page-hotCity-ul').children[i].onclick = function () {
             goToSearch(hotId[i])
         }
@@ -47,7 +45,6 @@ $.getId('search-page-search-input').addEventListener('keyup', function searchCit
 // 显示搜索结果
 // 参数： location：搜索结果的数组
 function showSearchCity(location) {
-    console.log(location);
     $.getClass('search-result').innerHTML = ''
     location.forEach(item => {
         let li = document.createElement('li')
